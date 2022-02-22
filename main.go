@@ -2,24 +2,12 @@ package main
 
 import "fmt"
 
-type cliente struct {
-	nome  string
-	email string
-}
-
-/* type bilhete struct {
-	nome       string
-	valor      float32
-	quantidade uint
-} */
-
 func main() {
-	meuCliente := cliente{
-		nome:  "Pedro",
-		email: "Pedro@globo.com",
-	}
-
+	var nome string
+	var numberTicket float32
+	fmt.Println("Qual é o seu nome ?")
+	fmt.Scanln(&nome)
+	fmt.Print("Quantos tickets você quer reservar? \n")
+	fmt.Scanf("%f\n", &numberTicket)
+	fmt.Printf(" deseja mesmo reservar %f", numberTicket)
 }
-
-fmt.Println("teste", meuCliente.nome, meuCliente.email, "teste")
-
