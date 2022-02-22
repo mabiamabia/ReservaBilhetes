@@ -1,18 +1,34 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	var nome string
 	var numberTicket float32
-	var multiplica float32
-	multiplica = numberTicket * 10.5
+	var ticket float32 = 10.5
+	var novaCompra float32
 
-	fmt.Println("Qual é o seu nome ?")
-	fmt.Scanln(&nome)
-	fmt.Print("Quantos tickets você quer reservar? \n")
-	fmt.Scanf("%f\n", &numberTicket)
-	fmt.Printf("Deseja mesmo reservar %f ?\n", numberTicket)
+	for {
+		novaCompra = 1
 
-	fmt.Println(nome, ", você reservou:", numberTicket, "ticket(s), no valor de R$ ", multiplica)
+		fmt.Println("Qual é o seu nome ?")
+		fmt.Scanln(&nome)
+		fmt.Print("Quantos tickets você quer reservar? \n")
+		fmt.Scanf("%f\n", &numberTicket)
+		fmt.Println("Deseja mesmo reservar?\n", numberTicket)
+		fmt.Print(nome, " você comprou ", numberTicket, " ticket(s)")
+		fmt.Printf(" no valor de R$ %.2f \n", (numberTicket * ticket))
+		fmt.Println("Parabéns! Sua compra foi confirmada")
+		fmt.Println("Deseja realizar uma nova compra?\nDigite: 1 - Sim  2 - Não ")
+		fmt.Scanln(&novaCompra)
+
+		//if nova == s {
+		/* volta ao inicio */
+		//} else {
+		/* Sai do sistema */
+		//}
+
+	}
 }
