@@ -15,7 +15,7 @@ func main() {
 
 		fmt.Println("Qual é o seu nome ?")
 		fmt.Scanln(&nome)
-		fmt.Print("Quantos tickets você quer reservar? \n")
+		fmt.Print(nome, ", quantos tickets você quer reservar? \n")
 		fmt.Scanf("%f\n", &numberTicket)
 		fmt.Println("Deseja mesmo reservar?\n", numberTicket)
 		fmt.Print(nome, " você comprou ", numberTicket, " ticket(s)")
@@ -23,12 +23,5 @@ func main() {
 		fmt.Println("Parabéns! Sua compra foi confirmada")
 		fmt.Println("Deseja realizar uma nova compra?\nDigite: 1 - Sim  2 - Não ")
 		fmt.Scanln(&novaCompra)
-
-		//if nova == s {
-		/* volta ao inicio */
-		//} else {
-		/* Sai do sistema */
-		//}
-
 	}
 }
